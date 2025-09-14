@@ -7,7 +7,7 @@ This tool is used to extract the number of fires from a given country. The user 
 ```bash
 'file_name':      the path to the input file
 'country_column': the column index where the country names are stored
-'country':        the name of the country we want fire information for
+'country':        the name of the country we want fire information from
 'result_column':  the column index where the desired values, i.e, number of fires are stored
 ```
 
