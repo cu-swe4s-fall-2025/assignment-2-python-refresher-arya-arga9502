@@ -1,8 +1,33 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_G_SdF8U)
-# python-refresher
+### Fire Analysis Tool (v2.0.0)
 
-In this assignment, get_column function was developed that accesses and prints values from the desired column based on provided conditions.  For example, we wish to print the CO2 emissions values but only from a certain year or country. We can achieve this using the get_column function from my_utils package.
+## Description
 
-Then, a program called print_fires.py was written which calls the get_column function from the my_utils package and runs it on an example data set. We use the function to print forest fire information from the USA.
+This tool is used to extract the number of fires from a given country. The user is expected to define 4 arguments to the run the function successfully in the command line.
 
-Finally, bash script run.sh was written to run the program print_fires.py.
+```bash
+'file_name':      the path to the input file
+'country_column': the column index where the country names are stored
+'country':        the name of the country we want fire information from
+'result_column':  the column index where the desired values, i.e, number of fires are stored
+```
+
+---------------------------------------------------------------------------------
+## Installation
+
+1. Make sure you have **Python 3.7+** installed.  
+   You can check with:
+```bash
+python --version
+```
+2. Clone this repository
+```bash
+git clone https://github.com/cu-swe4s-fall-2025/assignment-2-python-refresher-arya-arga9502.git
+cd assignment-2-python-refresher-arya-arga9502.git
+```
+
+
+## Usage
+Demo code to run the program
+```bash
+python print_fires.py --country "United States of America" --country_column 0 --fires_column 4 --file_name Agrofood_co2_emission.csv
+```
