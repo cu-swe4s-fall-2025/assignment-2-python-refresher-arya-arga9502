@@ -4,10 +4,12 @@
 
 This tool is used to extract the number of fires from a given country. The user is expected to define 4 arguments to the run the function successfully in the command line.
 
+```bash
 'file_name':      the path to the input file
 'country_column': the column index where the country names are stored
 'country':        the name of the country we want fire information for
-'result_column':  the column index where the desired values (fires) are stored
+'result_column':  the column index where the desired values, i.e, number of fires are stored
+```
 
 ---------------------------------------------------------------------------------
 ## Installation
