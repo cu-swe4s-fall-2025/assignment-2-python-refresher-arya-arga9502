@@ -18,8 +18,10 @@ This tool is used to extract the number of fires from a given country. The user 
 python --version
 ```
 2. Clone this repository
+```bash
 git clone https://github.com/cu-swe4s-fall-2025/assignment-2-python-refresher-arya-arga9502.git
 cd assignment-2-python-refresher-arya-arga9502.git
+```
 
 
 ## Usage
