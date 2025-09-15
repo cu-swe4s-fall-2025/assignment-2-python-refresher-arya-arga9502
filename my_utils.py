@@ -13,7 +13,7 @@ def get_column(file_name, country_column, country, fires_column):
     file_name:      the path to the input file
     country_column: the column index where the country names are stored
     country:        the name of the country we want fire information for
-    result_column:  the column index where the desired values are stored
+    fires_column:  the column index where the desired values are stored
 
     Returns
     ------------
@@ -31,7 +31,7 @@ def get_column(file_name, country_column, country, fires_column):
                 if row[country_column] == country:
                     try:
                         # Append results to add number of fires
-                        results.append(int(row[fires_column]))
+                        results.append((row[fires_column]))
                     except ValueError:
                         # If value cannot be converted to integers, skip
                         continue

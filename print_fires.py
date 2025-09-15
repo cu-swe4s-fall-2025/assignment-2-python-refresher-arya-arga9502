@@ -33,7 +33,7 @@ def main():
             args.file_name,
             args.country_column,
             args.country,
-            result_column=args.fires_column
+            args.fires_column
         )
         print(f"The number of fires were {fires}.")
     except FileNotFoundError:
