@@ -8,7 +8,7 @@ This tool is used to extract the number of fires from a given country. The user 
 'file_name':      the path to the input file
 'country_column': the column index where the country names are stored
 'country':        the name of the country we want fire information from
-'result_column':  the column index where the desired values, i.e, number of fires are stored
+'fires_column':  the column index where the desired values, i.e, number of fires are stored
 ```
 
 ---------------------------------------------------------------------------------
@@ -29,5 +29,5 @@ cd assignment-2-python-refresher-arya-arga9502.git
 ## Usage
 Demo code to run the program
 ```bash
-python print_fires.py --country "United States of America" --country_column 0 --fires_column 4 --file_name Agrofood_co2_emission.csv
+python print_fires.py --country "United States of America" --country_column 0 --fires_column 3 --file_name Agrofood_co2_emission.csv
 ```
