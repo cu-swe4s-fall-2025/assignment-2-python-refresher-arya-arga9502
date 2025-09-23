@@ -39,6 +39,3 @@ def get_column(file_name, country_column, country, fires_column):
     except FileNotFoundError:
         raise
     return results
-
-
-
