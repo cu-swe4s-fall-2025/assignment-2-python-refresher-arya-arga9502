@@ -31,7 +31,7 @@ def get_column(file_name, country_column, country, fires_column):
                 if row[country_column] == country:
                     try:
                         # Append results to add number of fires
-                        results.append(int(row[fires_column]))
+                        results.append(int(float(row[fires_column])))
                     except ValueError:
                         # If value cannot be converted to integers, skip
                         continue
