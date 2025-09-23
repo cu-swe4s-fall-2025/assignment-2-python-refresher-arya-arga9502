@@ -7,7 +7,8 @@ python print_fires.py \
     --country "United States of America" \
     --country_column 0 \
     --fires_column 3 \
-    --file_name Agrofood_co2_emission.csv
+    --file_name Agrofood_co2_emission.csv \
+    --operation "sd"
 
 echo "Example 2 (missing file):"
 python print_fires.py \

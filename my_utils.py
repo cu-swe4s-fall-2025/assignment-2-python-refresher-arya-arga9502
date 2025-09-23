@@ -31,7 +31,7 @@ def get_column(file_name, country_column, country, fires_column):
                 if row[country_column] == country:
                     try:
                         # Append results to add number of fires
-                        results.append(int(row[fires_column]))
+                        results.append(int(float(row[fires_column])))
                     except ValueError:
                         # If value cannot be converted to integers, skip
                         continue
@@ -39,3 +39,61 @@ def get_column(file_name, country_column, country, fires_column):
     except FileNotFoundError:
         raise
     return results
+
+def get_mean(numbers):
+    """Returns the mean from an array of numbers
+
+    Arguments
+    -------------
+    numbers: an array containing integers which we want to compute the mean for
+
+    Returns
+    ------------
+    mean: Mean value of the given array of integers
+    """
+    if len(numbers) == 0:
+        raise ValueError("The list of numbers is empty.")
+    mean = sum(numbers) / len(numbers)
+    return mean
+    
+def get_median(numbers):
+    """Returns the median from an array of numbers
+
+    Arguments
+    -------------
+    numbers: an array containing integers which we want to compute the median for
+
+    Returns
+    ------------
+    mean: median value of the given array of integers
+    """
+    if len(numbers) == 0:
+        raise ValueError("The list of numbers is empty.")
+    sorted_nums = sorted(numbers)
+    n = len(sorted_nums)
+    mid = n // 2
+    if n % 2 == 0:
+        # even number of elements → average the two middle values
+        median = (sorted_nums[mid - 1] + sorted_nums[mid]) / 2
+    else:
+        # odd number of elements → take the middle value
+        median = sorted_nums[mid]
+    return median
+
+def get_sd(numbers):
+    """Returns the standard deviation from an array of numbers
+
+    Arguments
+    -------------
+    numbers: an array containing integers which we want to compute the standard deviation for
+
+    Returns
+    ------------
+    sd: standard deviation of the given array of integers
+    """
+    if len(numbers) == 0:
+        raise ValueError("The list of numbers is empty.")
+    mean = sum(numbers) / len(numbers)
+    variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
+    sd = (variance)**0.5
+    return sd
