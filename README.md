@@ -31,3 +31,20 @@ Demo code to run the program
 ```bash
 python print_fires.py --country "United States of America" --country_column 0 --fires_column 3 --file_name Agrofood_co2_emission.csv
 ```
+
+
+
+## Testing
+
+Unit tests and functional tests have been added in the test directory. These tests must be run from the root directory of the repository. 
+
+The unit test has been written to test the functions defined in this package, i.e. functions to calculate of mean, median, and standard deviation. You will be able to run the unit test with the command: 
+
+```bash
+python src/test_my_utils.py
+```
+The functional test has been written to test whether the program as a whole runs correctly. You will be able to run the functional test with the command:
+
+```bash
+bash src/test_print_fires.py
+```

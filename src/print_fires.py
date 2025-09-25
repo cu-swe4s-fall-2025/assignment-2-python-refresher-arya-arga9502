@@ -8,6 +8,7 @@ Arguments:
     --country_column (int)  Column index for country names
     --fires_column (int)    Column index for number of fires
     --file_name (str)       Path to the input file
+    --operation (str)       Operation to perform: mean, median, or sd
 """
 import my_utils
 import argparse
@@ -25,6 +26,9 @@ def main():
                         required=True, help="Column index for number of fires")
     parser.add_argument("--file_name",
                         required=True, help="Path to the input file")
+    parser.add_argument("--operation",
+                        choices=["mean", "median", "sd"],
+                        help="Operation to perform on fire values")
 
     args = parser.parse_args()
 
@@ -36,6 +40,17 @@ def main():
             args.fires_column
         )
         print(f"The number of fires were {fires}.")
+
+        if args.operation == "mean":
+            result = my_utils.get_mean(fires)
+            print(f"Mean number of fires in {args.country}: {result}")
+        elif args.operation == "median":
+            result = my_utils.get_median(fires)
+            print(f"Median number of fires in {args.country}: {result}")
+        elif args.operation == "sd":
+            result = my_utils.get_sd(fires)
+            print(f"Standard deviation of fires in {args.country}: {result}")
+
     except FileNotFoundError:
         print(f"Error: File '{args.file_name}' not found.", file=sys.stderr)
     except ValueError as e:
