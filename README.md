@@ -41,10 +41,10 @@ Unit tests and functional tests have been added in the test directory. These tes
 The unit test has been written to test the functions defined in this package, i.e. functions to calculate of mean, median, and standard deviation. You will be able to run the unit test with the command: 
 
 ```bash
-python test_my_utils.py
+python src/test_my_utils.py
 ```
 You functional test has been written to test whether the program as a whole runs correctly. You will be able to run the functional test with the command:
 
 ```bash
-bash test_print_fires.py
+bash src/test_print_fires.py
 ```
