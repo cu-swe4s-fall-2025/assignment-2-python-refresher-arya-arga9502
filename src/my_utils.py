@@ -40,6 +40,7 @@ def get_column(file_name, country_column, country, fires_column):
         raise
     return results
 
+
 def get_mean(numbers):
     """Returns the mean from an array of numbers
 
@@ -55,13 +56,15 @@ def get_mean(numbers):
         raise ValueError("The list of numbers is empty.")
     mean = sum(numbers) / len(numbers)
     return mean
-    
+
+
 def get_median(numbers):
     """Returns the median from an array of numbers
 
     Arguments
     -------------
-    numbers: an array containing integers which we want to compute the median for
+    numbers: an array containing integers which we want to
+    compute the median for
 
     Returns
     ------------
@@ -80,12 +83,14 @@ def get_median(numbers):
         median = sorted_nums[mid]
     return median
 
+
 def get_sd(numbers):
     """Returns the standard deviation from an array of numbers
 
     Arguments
     -------------
-    numbers: an array containing integers which we want to compute the standard deviation for
+    numbers: an array containing integers which we want to
+    compute the standard deviation for
 
     Returns
     ------------
@@ -97,4 +102,3 @@ def get_sd(numbers):
     variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
     sd = (variance)**0.5
     return sd
-                 

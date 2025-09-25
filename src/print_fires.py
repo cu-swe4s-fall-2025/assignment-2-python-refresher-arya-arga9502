@@ -48,7 +48,7 @@ def main():
             result = my_utils.get_median(fires)
             print(f"Median number of fires in {args.country}: {result}")
         elif args.operation == "sd":
-            result = my_utils.get_sd(fires)  
+            result = my_utils.get_sd(fires)
             print(f"Standard deviation of fires in {args.country}: {result}")
 
     except FileNotFoundError:
