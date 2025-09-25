@@ -8,10 +8,11 @@ import my_utils
 
 
 class CalcTest(unittest.TestCase):
-    def test_mean(self):
+    def test_mean(self):  # test the mean function defined in my_utils
         for i in range(1000):
+            # randomly generate 10 numbers between 1 and 100
             numbers = np.random.randint(1, 100, size=10)
-            mean = np.mean(numbers)
+            mean = np.mean(numbers)  # find mean using the np library
             self.assertEqual(my_utils.get_mean(numbers), mean)
             self.assertNotEqual(my_utils.get_mean(numbers), 102)
             self.assertTrue(1 <= mean <= 100)
@@ -21,10 +22,11 @@ class CalcTest(unittest.TestCase):
         self.assertEqual(my_utils.get_mean(list2), -3)
 
 
-def test_median(self):
+def test_median(self):  # test the median function defined in my_utils
     for i in range(1000):
+        # randomly generate 10 numbers between 1 and 100
         numbers = np.random.randint(1, 100, size=10)
-        median = np.median(numbers)
+        median = np.median(numbers)  # find median using the np library
         self.assertEqual(my_utils.get_median(numbers), median)
         self.assertNotEqual(my_utils.get_median(numbers), 102)
         self.assertTrue(1 <= median <= 100)
@@ -34,10 +36,11 @@ def test_median(self):
     self.assertEqual(my_utils.get_median(list2), -12)
 
 
-def test_sd(self):
+def test_sd(self):  # test the standard deviation function defined in my_utils
     for i in range(1000):
+        # randomly generate 10 numbers between 1 and 100
         numbers = np.random.randint(1, 100, size=10)
-        sd = np.std(numbers)
+        sd = np.std(numbers)  # find sd using the np library
         self.assertAlmostEqual(my_utils.get_sd(numbers), sd, places=2)
         self.assertNotEqual(my_utils.get_sd(numbers), 102)
         self.assertTrue(1 <= sd <= 100)
