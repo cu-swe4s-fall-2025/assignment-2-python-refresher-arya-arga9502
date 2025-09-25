@@ -43,7 +43,7 @@ The unit test has been written to test the functions defined in this package, i.
 ```bash
 python src/test_my_utils.py
 ```
-You functional test has been written to test whether the program as a whole runs correctly. You will be able to run the functional test with the command:
+The functional test has been written to test whether the program as a whole runs correctly. You will be able to run the functional test with the command:
 
 ```bash
 bash src/test_print_fires.py
