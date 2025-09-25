@@ -28,7 +28,7 @@ def get_column(file_name, country_column, country, fires_column):
                 # Remove trailing newline, split by comma into list of values
                 row = line.rstrip().split(",")
                 # If the input country matches country index, proceed
-                if row[country_column] == country:
+                if row[country_column].strip('" ') == country:
                     try:
                         # Append results to add number of fires
                         results.append(int(float(row[fires_column])))
@@ -97,3 +97,4 @@ def get_sd(numbers):
     variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
     sd = (variance)**0.5
     return sd
+                 
