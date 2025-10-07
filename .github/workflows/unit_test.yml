@@ -3,7 +3,9 @@ name: Tests
 on:
   push:
   pull_request:
-
+      branches:
+      - main          
+      
 jobs:
   run_unit_test:
     runs-on: ubuntu-latest
