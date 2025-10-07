@@ -4,3 +4,4 @@ channels:
   - conda-forge
 dependencies:
   - pycodestyle>=2.14
+   - numpy>=2.3
