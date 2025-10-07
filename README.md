@@ -48,3 +48,7 @@ The functional test has been written to test whether the program as a whole runs
 ```bash
 bash src/test_print_fires.py
 ```
+
+##Continuous Integration
+
+It is often a problem that scripts that run on one machine does not run in others, which has been a big problem is software development. We have therefore added tests that run on an independent machine in the cloud to ensure that the scripts developed and deposited in this repository are replicable. Our unit test runs the functions in my_utils script (my_utils.py) and the functional test runs the whole script (print_fires.sh) in a virtual machine. Additionally, we also run a linter test to make sure the python scripts follow python programming style guides (PEP8). The tests run everytime there is a branch push and anytime the a pull request is made into the main branch. 
